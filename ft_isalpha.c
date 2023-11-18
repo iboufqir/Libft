@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:33:35 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/03 14:39:06 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:09:37 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/* int main()
-{
-    char x = 'i';
-    printf("%d", ft_isalpha(x));
-} */

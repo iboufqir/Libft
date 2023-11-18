@@ -6,10 +6,12 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:29:26 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/03 15:52:58 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/17 10:41:06 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include "libft.h"
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -29,9 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/* int main()
-{
-    char a[] = "imane";
-    char x[] = "imane";
-    printf ("%d", ft_memcmp(a,x,5));
-} */

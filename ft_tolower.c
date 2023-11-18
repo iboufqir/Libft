@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 18:19:59 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/03 14:40:05 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/15 12:46:31 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int	ft_tolower(int c)
 }
 /* int main()
 {
-    char x = 'A';
-    printf("%c", ft_tolower(x));
+    char x = 't';
+    printf("%d", ft_tolower(x));
 } */

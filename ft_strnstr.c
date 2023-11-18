@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:47:06 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/06 17:01:50 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:05:28 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t		j;
 
 	i = 0;
-	if (*needle == 0)
+	if (!*needle)
 		return ((char *)haystack);
 	while (haystack[i] && i < len)
 	{
@@ -32,11 +32,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-/* int main()
-{
-    char a[] = "iamne";
-    char x[] = "n";
-    printf("%s", ft_strnstr(a,x,4));
-} */

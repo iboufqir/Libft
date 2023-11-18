@@ -6,13 +6,13 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:53:19 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/06 12:40:48 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:22:13 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_num_len(int n)
+static int	get_num_len(int n)
 {
 	int	len;
 
@@ -30,7 +30,7 @@ int	get_num_len(int n)
 	return (len);
 }
 
-char	*ft_converter(int n, char *r)
+static char	*ft_converter(int n, char *r)
 {
 	int	i;
 	int	ng;
@@ -44,7 +44,7 @@ char	*ft_converter(int n, char *r)
 	}
 	while (i >= ng)
 	{
-		r[i] = (n % 10) + 48;
+		r[i] = (n % 10) + '0';
 		n /= 10;
 		i--;
 	}

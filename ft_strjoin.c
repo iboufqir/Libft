@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:29:06 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/05 14:59:18 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/15 12:22:32 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(r + ft_strlen(r), s2, ft_strlen(s2));
 	return (r);
 }
-/* int main()
-{
-    char s1[] = "imane";
-    char s2[] = "hello";
-    printf("%s", ft_strjoin(s1,s2));
-} */

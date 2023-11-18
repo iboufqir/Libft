@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:06:16 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/03 14:39:10 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:17:19 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-/* int main()
-{
-    int x = 130;
-    printf("%d", ft_isascii(x));
-} */

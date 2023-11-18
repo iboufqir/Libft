@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:55:17 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/03 15:50:28 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:01:46 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,3 @@ int	ft_isalnum(int c)
 		return (c);
 	return (0);
 }
-/* int main(void)
-{
-    char x = 'l';
-    printf ("%d" ,ft_isalnum(x));
-} */

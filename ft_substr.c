@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 12:15:05 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/05 13:15:34 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:34:57 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	size_t	i;
 
 	if (!s)
 		return (NULL); 
@@ -26,16 +25,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		str[i] = s[start + i];
-		i++;
-	}
+	ft_memcpy(str, &s[start], len);
+	str[len] = '\0';
 	return (str);
 }
 /* int main()
 {
     char string[] = "hello imane";
-    printf ("%s", ft_substr(string, 0, 10));
+    printf ("%s", ft_substr(string, 12, ));
 } */

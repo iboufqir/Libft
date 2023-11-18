@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 15:09:27 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/06 15:18:45 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:15:35 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	trimmed_len;
 
 	start = 0;
-	if (s1 == NULL || set == NULL)
+	if (!s1 || !set)
 		return (NULL);
 	end = 0;
 	end = ft_strlen(s1);
@@ -43,16 +43,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && ft_strchr(set, s1[end - 1]) != NULL)
 		end--;
 	trimmed_len = end - start;
-	trimmed = (char *)malloc((trimmed_len + 1) * sizeof(char));
+	trimmed = (char *)ft_calloc(trimmed_len + 1, sizeof(char));
 	if (trimmed == NULL)
 		return (NULL);
 	ft_strncpy(trimmed, s1 + start, trimmed_len);
-	trimmed[trimmed_len] = '\0';
 	return (trimmed);
 }
-/*int main()
+/* int main()
 {
-	char str[] = "\t   \n\n\n  \t\t\n  \t\t\t\t  ";
-	char s[] = "\t";
-	printf("%s", ft_strtrim(str, s));
-}*/
+	char str[] = "hhuhuhu";
+	char s[] = "";
+	printf("%s", ft_strtrim(str, NULL));
+} */

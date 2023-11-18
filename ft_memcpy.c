@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:29:33 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/03 14:39:27 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:09:36 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,18 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	s = (unsigned char *)src;
 	d = (unsigned char *)dst;
 	i = 0;
-	if (!dst && !src)
-		return (0);
+	if (dst == src)
+		return (dst);
 	while (i < n)
 	{
 		d[i] = s[i];
 		i++;
 	}
-	return (dst);
+	return (d);
 }
 /* int main()
 {
     char dest[] = "";
-    char srcc[] = "imane";
-    ft_memcpy(dest,srcc,2);
-    printf("destination : %s", dest);
+    char srcc[] = "imanee";
+    printf("destination : %s", ft_memcpy(dest,srcc,3));
 } */

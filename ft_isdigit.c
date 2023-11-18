@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:50:08 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/03 14:51:08 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:15:36 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-/* int main(void)
-{
-    char x = '8';
-    printf("%d" ,ft_isdigit(x));
-} */

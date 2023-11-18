@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 11:08:34 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/03 14:39:44 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:32:17 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	d = ft_long(dst);
 	s = ft_long(src);
+	if (!dst && dstsize == 0)
+		return (s);
+	d = ft_long(dst);
 	if (dstsize < d)
 		return (dstsize + s);
 	dstsize = dstsize - d;
@@ -45,9 +47,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (d + s);
 }
-/* int main()
-{
-    char d[] = "imane";
-    char s[] = "hello";
-    printf("%zu" ,ft_strlcat(d,s,6));
-} */

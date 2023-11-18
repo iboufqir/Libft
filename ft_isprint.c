@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:19:29 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/03 14:39:19 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/13 19:47:53 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-/* int main(void)
-{
-    char x = 32;
-    printf("%d",ft_isprint(x));
-} */

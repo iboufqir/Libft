@@ -1,54 +1,86 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/13 18:16:53 by iboufqir          #+#    #+#             */
+/*   Updated: 2023/11/17 11:56:02 by iboufqir         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
 
-// Fonction à utiliser avec ft_lstiter pour imprimer le contenu d'un élément de la liste
-void print_function(void *content)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    printf("%d\n", *(int *)content);
+	t_list	*new_list;
+	t_list	*new_obj;
+
+	if (!lst || !f || !del)
+		return (NULL);
+	new_list = NULL;
+	while (lst)
+	{
+		new_obj = ft_lstnew(NULL);
+		if (!new_obj)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		new_obj->content = f(lst->content);
+		ft_lstadd_back(&new_list, new_obj);
+		lst = lst->next;
+	}
+	return (new_list);
+}
+/* void	*f(void *str)
+{
+	char *s;
+	int i;
+
+	s = (char *)str;
+	i = 0;
+	while(s[i])
+	{
+		if(s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
+		i++;
+	}
+	return((void *)s);
 }
 
-// Fonction à appliquer pour la transformation des éléments de la liste
-void *map_function(void *content)
+
+void	del(void *str)
 {
-    // Exemple simple : doubler chaque élément de la liste
-    int *value = (int *)content;
-    int *result = malloc(sizeof(int));
-    if (result)
-        *result = (*value) * 2;
-    return result;
+	free(str);
 }
 
-// Fonction pour supprimer le contenu d'un élément de la liste
-void delete_function(void *content)
+int main()
 {
-    // Exemple simple : libérer la mémoire allouée pour un entier
-    free(content);
-}
+	t_list *node1 = ft_lstnew(ft_strdup("imane"));
+	t_list *node2 = ft_lstnew(ft_strdup("moaad"));
+	t_list *node3 = ft_lstnew(ft_strdup("maryam"));
+	t_list *node4 = ft_lstnew(ft_strdup("ahmed"));
+	t_list *list = node1;
 
-int main(void)
-{
-    // Création d'une liste avec quelques éléments
-    t_list *original_list = ft_lstnew(malloc(sizeof(int)));
-    original_list->content = (void *)1;
-    ft_lstadd_back(&original_list, ft_lstnew(malloc(sizeof(int))));
-    original_list->next->content = (void *)2;
-    ft_lstadd_back(&original_list, ft_lstnew(malloc(sizeof(int))));
-    original_list->next->next->content = (void *)3;
+	ft_lstadd_back(&list, node2);
+	ft_lstadd_back(&list, node3);
+	ft_lstadd_back(&list, node4);
+	t_list *current = list;
+	while(current)
+	{
+		printf ("%s ->", current->content);
+		current = current->next;
+	}
+	printf("\n");
+	t_list *new_list = ft_lstmap(list, f, del);
 
-    // Utilisation de ft_lstmap pour créer une nouvelle liste transformée
-    t_list *transformed_list = ft_lstmap(original_list, &map_function, &delete_function);
-
-    // Affichage de la liste originale
-    printf("Original List:\n");
-    ft_lstiter(original_list, &print_function);
-
-    // Affichage de la liste transformée
-    printf("\nTransformed List (doubled):\n");
-    ft_lstiter(transformed_list, &print_function);
-
-    // Nettoyage de la mémoire
-    ft_lstclear(&original_list, &delete_function);
-    ft_lstclear(&transformed_list, &delete_function);
-
-    return 0;
-}
+    current = new_list;
+    while (current)
+    {
+        printf("%s ->", current->content);
+        current = current->next;
+    }
+    printf("\n");
+} */

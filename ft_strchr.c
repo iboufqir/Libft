@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 21:16:34 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/03 20:44:56 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:19:21 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (s[i] == cc)
 		return ((char *)&s[i]);
-	return (0);
+	return (NULL);
 }
-/* int main()
-{
-    char a[] = "aiia";
-    char c = 'a';
-    printf("%s" , ft_strchr(a,c));
-} */

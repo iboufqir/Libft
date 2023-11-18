@@ -6,7 +6,7 @@
 /*   By: iboufqir <iboufqir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:32:37 by iboufqir          #+#    #+#             */
-/*   Updated: 2023/11/03 16:55:58 by iboufqir         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:44:39 by iboufqir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	x;
+	size_t	i;
 
-	x = 0;
-	while (s[x])
-	{
-		x++;
-	}
-	return (x);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
-/* int main()
-{
-    char a[] = "ahmed";
-    printf("%d", ft_strlen(a));
-} */
