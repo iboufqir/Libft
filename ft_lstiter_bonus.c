@@ -25,24 +25,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		current = current->next;
 	}
 }
-
-/* void f(void *content) {
-	printf("%s\n", (char *)content);
-}
-
-int main() {
-	t_list *node1 = ft_lstnew("imane");
-	t_list *node2 = ft_lstnew("maryam");
-	t_list *node3 = ft_lstnew("moaad");
-
-	t_list *lst = node1;
-
-	// Add nodes to the list
-	ft_lstadd_back(&lst, node2);
-	ft_lstadd_back(&lst, node3);
-
-
-	ft_lstiter(lst, f);
-
-	return 0;
-} */

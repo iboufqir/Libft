@@ -26,15 +26,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-/* int main()
-{
-	t_list *node1 = ft_lstnew("imane");
-	t_list *node2 = ft_lstnew("imane");
-	t_list *node3 = ft_lstnew("imane");
-
-	t_list *list = node1;
-	ft_lstadd_back(&list, node2);
-	ft_lstadd_back(&list, node3);
-
-	printf("%d",ft_lstsize(list));
-} */

@@ -18,8 +18,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-/* int main()
-{
-    int x = 'i';
-    printf("%c" , ft_toupper(x));
-} */

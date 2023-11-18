@@ -19,17 +19,3 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	del(lst->content);
 	free(lst);
 }
-/* void del(void *s)
-{
-		free(s); 
-}
-
-int main() {
-    t_list *node1 = ft_lstnew(ft_strdup("imane"));
-    
-    printf("%s\n", node1->content);
-
-    ft_lstdelone(node1, del);
-	printf("%s\n",node1->content);
-    return 0;
-} */

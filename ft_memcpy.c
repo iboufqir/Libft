@@ -30,9 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (d);
 }
-/* int main()
-{
-    char dest[] = "";
-    char srcc[] = "imanee";
-    printf("destination : %s", ft_memcpy(dest,srcc,3));
-} */

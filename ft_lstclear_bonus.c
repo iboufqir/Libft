@@ -27,26 +27,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	free (*lst);
 	*lst = NULL;
 }
-/* void del(void *list)
-{
-	free(list);
-}
-int main()
-{
-	t_list *node1 = ft_lstnew(ft_strdup("imane"));
-	t_list *node2 = ft_lstnew(ft_strdup("moaad"));
-	t_list *node3 = ft_lstnew(ft_strdup("maryam"));
-	t_list *node4 = ft_lstnew(ft_strdup("ahmed"));
-	t_list *lst = node1;
-
-	ft_lstadd_back(&lst, node2);
-	ft_lstadd_back(&lst, node3);
-	ft_lstadd_back(&lst, node4);
-	
-	ft_lstclear(&lst, del);
-	while(lst)
-	{
-		printf("%s ->" , lst->content);
-		lst = lst->next;
-	}
-} */

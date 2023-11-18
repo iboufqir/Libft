@@ -33,10 +33,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	return (i);
 }
-/* int main()
-{
-    char d[] = "imane";
-    char s[] = "hello";
-    printf ("%zu\n", ft_strlcpy(d,s,7));
-    printf ("%zu" ,strlcpy(d,s,7));
-}  */

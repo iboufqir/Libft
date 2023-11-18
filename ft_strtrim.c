@@ -49,9 +49,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strncpy(trimmed, s1 + start, trimmed_len);
 	return (trimmed);
 }
-/* int main()
-{
-	char str[] = "hhuhuhu";
-	char s[] = "";
-	printf("%s", ft_strtrim(str, NULL));
-} */

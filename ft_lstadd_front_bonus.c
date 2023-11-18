@@ -19,20 +19,3 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-/* int main()
-{
-    t_list *node1 = ft_lstnew("imane");
-    t_list *node2 = ft_lstnew("maryam");
-    t_list *node3 = ft_lstnew("moaad");
-
-    t_list *list = node3;
-
-    ft_lstadd_front(&list, node1);
-    ft_lstadd_front(&list, node2);
-
-    while (list)
-    {
-        printf("%s\n", (list->content));
-        list = list -> next;
-    }
-} */

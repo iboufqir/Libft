@@ -23,12 +23,3 @@ t_list	*ft_lstnew(void *content)
 	newnode->next = NULL;
 	return (newnode);
 }
-/* int main()
-{
-	int *data;
-	data = malloc(sizeof(int));
-	*data = 42;
-	t_list	*node;
-	node = ft_lstnew(data);
-	printf("Contenu du noeud : %d\n", *(int *)(node->content));
-} */

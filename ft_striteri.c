@@ -25,17 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-/* void sample_function(unsigned int index, char *c)
-{
-	if(*c <= 'z' && *c >= 'a')
-		*c -=  32;
-}
-
-int main()
-{
-	char test_string[] = "Hello, World!";
-
-	ft_striteri(test_string, sample_function);
-	printf("%s" ,test_string);
-	return 0;
-} */
